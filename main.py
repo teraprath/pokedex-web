@@ -7,6 +7,7 @@ import random
 app = Flask(__name__)
 
 amount = 898
+api = "https://pokeapi.co/api/v2"
 
 @app.route("/<string:name>", methods=["POST", "GET"])
 def get(name):
@@ -15,15 +16,10 @@ def get(name):
     res = req.json()
     return jsonify(res)
 
-@app.route("/generate", methods=["POST"])
-def generate():
-    name = random.randint(1, amount)
-    return jsonify(name=name)
-
 @app.route("/")
 def index():
-    name = random.randint(1, amount)
-    return render_template("pages/index.html", name=name)
+    list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    return render_template("pages/index.html", list=list)
 
 if __name__ == "__main__":
     app.run(debug=True, port=5500)

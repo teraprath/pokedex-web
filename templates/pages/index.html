@@ -1,20 +1,14 @@
 {% extends "layouts/base.html" %}
 {% block content %}
 
-    <section>
-        <div class="container">
-            <img src="{{ url_for('static', filename='assets/Pokeball.svg') }}" alt="sprite" id="sprite">
-            <div>
-                <p>Pokemon: <strong><span id="name"></span></strong></p>
-                <p>ID: <strong><span id="id"></span></strong></p>
-                <p>Type: <strong><span id="type"></span></strong></p>
-            </div>
-        </div>
-        <button class="button" onclick="generate()">Generate</button>
-    </section>
+    {% include 'includes/header.html' %}
 
-    {% block scripts %}
-    <script>update({{ name }})</script>
-    {% endblock %}
+    <section class="main">
+        {% for i in list %}
+            {% with name=i %}
+                {% include 'includes/card.html' %}
+            {% endwith %}
+        {% endfor %}
+    </section>
     
 {% endblock %}
