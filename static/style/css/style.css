@@ -100,12 +100,6 @@ body {
   color: #4a4a4a;
 }
 
-.main .search-box form #error {
-  color: #e44444;
-  margin: 1em;
-  display: none;
-}
-
 .main .card-box img {
   width: 8em;
   height: 8em;

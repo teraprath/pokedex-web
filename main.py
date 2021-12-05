@@ -1,17 +1,8 @@
-from logging import error
 from flask import Flask, render_template, jsonify, request
 import requests
 
 app = Flask(__name__)
-
 api = "https://pokeapi.co/api/v2"
-
-@app.route("/search/<string:name>", methods=["POST", "GET"])
-def search(name):
-    url = api + "/pokemon/" + name
-    req = requests.get(url)
-    res = req.json()
-    return jsonify("", render_template("includes/card.html", res=res))
 
 @app.route("/", methods=["POST", "GET"])
 def index():
