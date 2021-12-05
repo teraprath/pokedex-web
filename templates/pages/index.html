@@ -1,14 +1,15 @@
 {% extends "layouts/base.html" %}
 {% block content %}
 
-    {% include 'includes/header.html' %}
-
     <section class="main">
-        {% for i in list %}
-            {% with name=i %}
+        {% include 'includes/search.html' %}
+        {% if pokemon %}
+            {% if pokemon == 'Not Found' %}
+                <p>No results for <strong>{{ name }}</strong>.</p>
+            {% else %}
                 {% include 'includes/card.html' %}
-            {% endwith %}
-        {% endfor %}
+            {% endif %}
+        {% endif %}
     </section>
     
 {% endblock %}

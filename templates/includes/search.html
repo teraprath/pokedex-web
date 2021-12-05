@@ -1,0 +1,8 @@
+<div class="container search-box">
+    <img src="{{ url_for('static', filename='assets/Logo.svg') }}" alt="logo">
+    <form method="post">
+        <input type="text" name="name" placeholder="Search for Name or ID" required>
+        <button type="submit"><i class="fas fa-search"></i></button>
+        <p id="error">Please check your input.</p>
+    </form>
+</div>

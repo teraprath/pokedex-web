@@ -1,4 +1,22 @@
-<div class="card">
+<div class="container card-box">
+    {% if pokemon['sprite'] %}
+    <img src="{{ pokemon['sprite'] }}" alt="sprite">
+    {% else %}
     <img src="{{ url_for('static', filename='assets/Pokeball.svg') }}" alt="sprite">
-    <p>{{ name }}</p>
+    {% endif %}
+    <p id="name">{{ pokemon['name'] }}</p>
+    <div class="stats">
+        <div class="column">
+            <p>ID</p>
+            <p>Type</p>
+            <p>Height</p>
+            <p>Weight</p>
+        </div>
+        <div class="column">
+            <p>{{ pokemon['id'] }}</p>
+            <p>{{ pokemon['type'] }}</p>
+            <p>{{ pokemon['height'] }}</p>
+            <p>{{ pokemon['weight'] }}</p>
+        </div>
+    </div>
 </div>

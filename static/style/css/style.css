@@ -12,13 +12,121 @@ html {
 
 body {
   font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  background-color: whitesmoke;
+  color: #363636;
 }
 
-header {
-  width: 100%;
-  height: 6em;
-  padding: 0 2em;
+.main {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .container {
+  width: 20em;
   background-color: white;
+  padding: 2em;
+  margin: 0.75em;
+  border-radius: 1em;
+  -webkit-box-shadow: 0em 0em 0.5em 0.15em rgba(0, 0, 0, 0.05);
+          box-shadow: 0em 0em 0.5em 0.15em rgba(0, 0, 0, 0.05);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .search-box img {
+  width: 12em;
+  margin-bottom: 1.25em;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.main .search-box img:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.main .search-box form input {
+  width: 12em;
+  height: 2em;
+  font-size: 1rem;
+  font-family: "Outfit", sans-serif;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #dbdbdb;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.main .search-box form input:hover, .main .search-box form input:focus {
+  border-bottom: 2px solid #b5b5b5;
+}
+
+.main .search-box form button {
+  width: 2em;
+  height: 2em;
+  outline: none;
+  border: none;
+  background-color: white;
+  color: #7a7a7a;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.main .search-box form button:hover, .main .search-box form button:focus {
+  color: #4a4a4a;
+}
+
+.main .search-box form #error {
+  color: #e44444;
+  margin: 1em;
+  display: none;
+}
+
+.main .card-box img {
+  width: 8em;
+  height: 8em;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.main .card-box img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.main .card-box #name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 0.5em;
+}
+
+.main .card-box .stats {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,46 +137,10 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-header .logo img {
-  width: 10em;
-}
-
-header .search-bar form input {
-  width: 10em;
-  height: 2.5em;
-  border: none;
-  outline: none;
-  border-bottom: 2px solid #dbdbdb;
-  padding-left: 0.25em;
-}
-
-header .search-bar form button {
-  width: 2.5em;
-  height: 2.5em;
-  border: none;
-  outline: none;
-  background-color: #2a75bb;
-  color: white;
-}
-
-.main {
-  height: 100vh;
-  padding: 0 2em;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (12em)[7];
-      grid-template-columns: repeat(7, 12em);
-  grid-auto-rows: 12em;
-}
-
-.main .card {
-  width: 12em;
-  height: 12em;
+.main .card-box .stats .column {
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,14 +148,18 @@ header .search-bar form button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-.main .card img {
-  width: 6em;
+.main .card-box .stats .column:last-child {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.main .card-box .stats .column:last-child p {
+  font-weight: 600;
+  text-transform: capitalize;
 }
