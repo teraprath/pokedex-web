@@ -9,7 +9,7 @@ def index():
     pokemon = None
     name = None
     if request.method == "POST":
-        name = request.form["name"]
+        name = request.form["name"].lower()
         url = api + "/pokemon/" + name
         try:
             req = requests.get(url)
