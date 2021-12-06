@@ -119,6 +119,11 @@ body {
   margin: 0.5em;
 }
 
+.main .card-box #types {
+  text-transform: capitalize;
+  margin: 0.5em;
+}
+
 .main .card-box .stats {
   width: 100%;
   display: -webkit-box;
@@ -156,4 +161,100 @@ body {
 .main .card-box .stats .column:last-child p {
   font-weight: 600;
   text-transform: capitalize;
+}
+
+.badge {
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  font-weight: 600;
+}
+
+.badge.normal {
+  background-color: #75515b;
+  color: white;
+}
+
+.badge.bug {
+  background-color: #1c4b27;
+  color: white;
+}
+
+.badge.dark {
+  background-color: #040706;
+  color: white;
+}
+
+.badge.dragon {
+  background-color: #448b95;
+  color: white;
+}
+
+.badge.fairy {
+  background-color: #971944;
+  color: white;
+}
+
+.badge.fighting {
+  background-color: #994025;
+  color: white;
+}
+
+.badge.fire {
+  background-color: #fd4c5a;
+  color: white;
+}
+
+.badge.flying {
+  background-color: #4a677d;
+  color: white;
+}
+
+.badge.ground {
+  background-color: #a9702c;
+  color: white;
+}
+
+.badge.ice {
+  background-color: #86d2f4;
+  color: white;
+}
+
+.badge.electric {
+  background-color: #e3e32b;
+  color: #4a4a4a;
+}
+
+.badge.ghost {
+  background-color: #906790;
+  color: white;
+}
+
+.badge.poison {
+  background-color: #9b69d9;
+  color: white;
+}
+
+.badge.grass {
+  background-color: #27cb4f;
+  color: white;
+}
+
+.badge.psycho {
+  background-color: #a42a6c;
+  color: white;
+}
+
+.badge.rock {
+  background-color: #8b3e21;
+  color: white;
+}
+
+.badge.steel {
+  background-color: #42bd94;
+  color: white;
+}
+
+.badge.water {
+  background-color: #86a8fc;
+  color: white;
 }

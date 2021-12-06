@@ -5,18 +5,21 @@
     <img src="{{ url_for('static', filename='assets/Pokeball.svg') }}" alt="sprite">
     {% endif %}
     <p id="name">{{ pokemon['name'] }}</p>
+    <p id="types">
+        {% for type in pokemon["types"] %}
+            <span class="badge {{ type }}">{{ type }}</span>
+        {% endfor %}
+    </p>
     <div class="stats">
         <div class="column">
             <p>ID</p>
-            <p>Type</p>
             <p>Height</p>
             <p>Weight</p>
         </div>
         <div class="column">
             <p>{{ pokemon['id'] }}</p>
-            <p>{{ pokemon['type'] }}</p>
-            <p>{{ pokemon['height'] }}</p>
-            <p>{{ pokemon['weight'] }}</p>
+            <p>{{ pokemon['height'] }}"</p>
+            <p>{{ pokemon['weight'] }}kg</p>
         </div>
     </div>
 </div>
