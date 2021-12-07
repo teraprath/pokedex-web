@@ -30,7 +30,7 @@ def index():
                 pokemon["sprite"] = res["sprites"]["front_default"]
         except:
             pokemon = "Not Found"
-    return render_template("pages/index.html", pokemon=pokemon, name=name)
+    return render_template("pages/index.html", pokemon=pokemon, req=name)
 
 if __name__ == "__main__":
     app.run(debug=True, port=5500) 

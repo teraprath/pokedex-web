@@ -5,7 +5,7 @@
         {% include 'includes/search.html' %}
         {% if pokemon %}
             {% if pokemon == 'Not Found' %}
-                <p>No results for <strong>{{ name }}</strong>.</p>
+                <p>No results for <strong>{{ req }}</strong>.</p>
             {% else %}
                 {% include 'includes/card.html' %}
             {% endif %}
