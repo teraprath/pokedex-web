@@ -11,15 +11,21 @@
         {% endfor %}
     </p>
     <div class="stats">
-        <div class="column">
-            <p>ID</p>
-            <p>Height</p>
-            <p>Weight</p>
+        <div class="box">
+            <p class="type">ID</p>
+            <p class="value">#{{ pokemon['id'] }}</p>
         </div>
-        <div class="column">
-            <p>{{ pokemon['id'] }}</p>
-            <p>{{ pokemon['height'] }}"</p>
-            <p>{{ pokemon['weight'] }}kg</p>
+        <div class="box">
+            <p class="type">Exp</p>
+            <p class="value">{{ pokemon['base_exp'] }}</p>
+        </div>
+        <div class="box">
+            <p class="type">Height</p>
+            <p class="value">{{ pokemon['height'] }}"</p>
+        </div>
+        <div class="box">
+            <p class="type">Weight</p>
+            <p class="value">{{ pokemon['weight'] }}kg</p>
         </div>
     </div>
 </div>

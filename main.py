@@ -16,7 +16,7 @@ def index():
             res = req.json()
             pokemon = {}
             pokemon["name"] = res["name"]
-            pokemon["id"] = "#" + str(res["id"])
+            pokemon["id"] = res["id"]
             pokemon["types"] = []
             n = len(res["types"])
             for i in range(n):
@@ -24,6 +24,7 @@ def index():
                 pokemon["types"].append(type)
             pokemon["height"] = res["height"]
             pokemon["weight"] = res["weight"]
+            pokemon["base_exp"] = res["base_experience"]
             pokemon["sprite"] = res["sprites"]["other"]["dream_world"]["front_default"]
             if pokemon["sprite"] == None:
                 pokemon["sprite"] = res["sprites"]["front_default"]
