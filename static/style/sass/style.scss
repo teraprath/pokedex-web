@@ -118,9 +118,9 @@ body {
             text-transform: capitalize;
         }
 
-        .stats {
+        .info {
             width: 100%;
-            margin-top: 1em;
+            margin: 2em 0;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-auto-rows: 1fr;
@@ -128,11 +128,15 @@ body {
 
             .box {
                 text-align: center;
-                text-transform: capitalize;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+                text-transform: capitalize;
+
+                &:first-child {
+                    text-transform: uppercase;
+                }
 
                 .type {
                     font-weight: 600;
@@ -144,6 +148,35 @@ body {
                     padding: 0.25em 0;
                     background-color: $white-ter;
                     border-radius: 1em;
+                }
+            }
+        }
+
+        .stats {
+            width: 100%;
+
+            .box {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 0.15em;
+
+                .label {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 30%;
+                    margin-right: 2em;
+                }
+
+                progress {
+                    width: 70%;
+                    height: 1em;
+                    background-color: $white-ter;
+                    border: none;
+                    outline: none;
+                    border-radius: 2em;
+                    overflow: hidden;
                 }
             }
         }

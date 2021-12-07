@@ -124,9 +124,9 @@ body {
   text-transform: capitalize;
 }
 
-.main .card-box .stats {
+.main .card-box .info {
   width: 100%;
-  margin-top: 1em;
+  margin: 2em 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -135,9 +135,8 @@ body {
   gap: 1em;
 }
 
-.main .card-box .stats .box {
+.main .card-box .info .box {
   text-align: center;
-  text-transform: capitalize;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,18 +150,64 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-transform: capitalize;
 }
 
-.main .card-box .stats .box .type {
+.main .card-box .info .box:first-child {
+  text-transform: uppercase;
+}
+
+.main .card-box .info .box .type {
   font-weight: 600;
 }
 
-.main .card-box .stats .box .value {
+.main .card-box .info .box .value {
   width: 6em;
   margin-top: 0.25em;
   padding: 0.25em 0;
   background-color: whitesmoke;
   border-radius: 1em;
+}
+
+.main .card-box .stats {
+  width: 100%;
+}
+
+.main .card-box .stats .box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 0.15em;
+}
+
+.main .card-box .stats .box .label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30%;
+  margin-right: 2em;
+}
+
+.main .card-box .stats .box progress {
+  width: 70%;
+  height: 1em;
+  background-color: whitesmoke;
+  border: none;
+  outline: none;
+  border-radius: 2em;
+  overflow: hidden;
 }
 
 .badge {
