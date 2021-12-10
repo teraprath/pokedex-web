@@ -126,7 +126,7 @@ body {
 
 .main .card-box .info {
   width: 100%;
-  margin: 2em 0 1.5em 0;
+  margin-top: 2em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -171,7 +171,7 @@ body {
 
 .main .card-box .stats {
   width: 100%;
-  margin-bottom: 1em;
+  margin-top: 1.5em;
 }
 
 .main .card-box .stats .box {
@@ -197,8 +197,16 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 30%;
-  margin-right: 2em;
+  width: 25%;
+  margin-right: 1em;
+}
+
+.main .card-box .stats .box .label p.type {
+  font-weight: 600;
+}
+
+.main .card-box .stats .box .label p i {
+  color: #4a4a4a;
 }
 
 .main .card-box .stats .box progress {
@@ -211,9 +219,26 @@ body {
   overflow: hidden;
 }
 
+.main .card-box .stats .box progress.hp::-moz-progress-bar {
+  background-color: #d66666;
+}
+
+.main .card-box .stats .box progress.attack::-moz-progress-bar {
+  background-color: #d6b366;
+}
+
+.main .card-box .stats .box progress.defense::-moz-progress-bar {
+  background-color: #66a0d6;
+}
+
+.main .card-box .stats .box progress.speed::-moz-progress-bar {
+  background-color: #e669bc;
+}
+
 .main .card-box .button {
   width: 8em;
   height: 3em;
+  margin-top: 1.5em;
   background-color: #86a8fc;
   color: white;
   font-weight: 600;

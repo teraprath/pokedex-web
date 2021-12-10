@@ -23,17 +23,19 @@
                 {% endfor %}
             </div>
             <div class="stats">
+                {% set count = namespace(value=0) %}
                 {% for stat in pokemon['stats']  %}
                     <div class="box">
                         <div class="label">
-                            <p>Type</p>
+                            <p class="type">{{ pokemon['icons'][count.value] }}</p>
                             <p>{{ pokemon['stats'][stat] }}</p>
                         </div>
-                        <progress value="{{ pokemon['stats'][stat] }}" max="100" class="progress"></progress>
+                        <progress value="{{ pokemon['stats'][stat] }}" max="100" class="{{ stat }}"></progress>
                     </div>
+                    {% set count.value = count.value + 1 %}
                 {% endfor %}
             </div>
-            <a href="{{ url_for('index') }}" class="button">Back</a>
+            <a href="{{ url_for('index', name=pokemon['name']) }}" class="button">Back</a>
         </div>
     </section>
 

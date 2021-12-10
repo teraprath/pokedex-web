@@ -29,6 +29,16 @@ def getData(pokemon: str):
             j = res["stats"][i]["stat"]["name"]
             pokemon["stats"][j] = res["stats"][i]["base_stat"]
 
+        del pokemon["stats"]["special-attack"]
+        del pokemon["stats"]["special-defense"]
+
+        pokemon["icons"] = []
+        pokemon["icons"].append("HP")
+        pokemon["icons"].append("AT")
+        pokemon["icons"].append("DF")
+        pokemon["icons"].append("SP")
+
+        pokemon["ability"] = res["abilities"][0]["ability"]["name"]
         pokemon["sprite"] = res["sprites"]["other"]["dream_world"]["front_default"]
         if pokemon["sprite"] == None:
             pokemon["sprite"] = res["sprites"]["front_default"]
